@@ -5,6 +5,7 @@ $errorActionPreference="stop"
 
 Write-Host "Deploying Updates to Github Pages"
 
+Get-ChildItem -Path .\public -Include *.* -Recurse | foreach { $_.Delete()}
 
 hugo.exe -t anubis
 
@@ -15,3 +16,5 @@ git add .
 git commit -m $msg
 
 git push origin master
+
+cd ..
