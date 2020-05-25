@@ -1,0 +1,25 @@
+baseURL: "https://rifhanakram.github.io/"
+languageCode: "en-us"
+title: "Rifhan's Blog"
+theme: "anubis"
+paginate: 10
+disqusShortname: rif.akram
+googleAnalytics: UA-123-45
+env: production
+
+menu:
+  main:
+  - identifier: archive
+    name: Archive
+    title: Archive
+    url: /posts/
+    weight: 0
+
+params:
+  author: "Rifhan Akram"
+  description: ""
+  images:
+    - images/og-featured.png
+  customCSS:
+    - css/my.css
+  dateFormat: "2006-01-02"
