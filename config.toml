@@ -1,0 +1,37 @@
+baseURL= "https://blog.rifhanakram.com/"
+languageCode= "en-us"
+title= "Scribbles by Rifhan"
+theme= "anubis"
+paginate= 10
+disqusShortname= "blog-rifhanakram"
+env= "production"
+
+[author]
+  name = "Rifhan Akram"
+
+[params]
+   author = "Rifhan Akram"
+   description = "Scribbles by Rifhan is a personal blog"
+   dateFormat = "2006-01-02"
+   paginationSinglePost = true
+   style = "light-without-switcher"
+   readMore = false
+
+[menu]
+
+  [[menu.main]]
+    identifier = "tech-talk"
+    name = "Tech Talks"
+    url = "/posts/tech-talks"
+    weight = 2
+
+  [[menu.main]]
+    name = "Posts"
+    identifier = "posts"
+    url = "/posts/"
+    weight = 3
+
+
+
+[markup.goldmark.renderer]
+unsafe = true
