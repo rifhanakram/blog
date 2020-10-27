@@ -1,9 +1,9 @@
-baseURL: "https://rifhanakram.github.io/"
+baseURL: "https://blog.rifhanakram.com/"
 languageCode: "en-us"
-title: "Rifhan's Blog"
+title: "Thoughts of Rifhan"
 theme: "anubis"
 paginate: 10
-disqusShortname: rif.akram
+disqusShortname: blog-rifhanakram
 googleAnalytics: UA-123-45
 env: production
 

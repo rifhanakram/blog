@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+    <article class="post">
+        <header>
+            <div>
+                <h1>{{ .Title }}</h1>
+               
+                <div class="time" style="font-size: 16px;
+                color: #666;
+                margin-bottom: 20px;
+                display: block;
+                font-weight: 600;
+                font-family: 'IBM Plex Mono', monospace;" >
+                    {{ .Date.Format "Monday, January 2, 2006" }} · {{ .ReadingTime }} min read
+                </div>
+            </div>
+                
+        </header>
+        <div class="content">
+            {{ .Content }}
+        </div>
+        {{ partial "articleInfoFull.html" . }}
+    </article>
+    {{ if .Site.DisqusShortname }}
+        {{ template "_internal/disqus.html" . }}
+    {{ end }}
+
+{{ end }}
