@@ -9,6 +9,8 @@ Get-ChildItem -Path .\public -Include *.* -Recurse | foreach { $_.Delete()}
 
 hugo.exe -t anubis
 
+mv CNAME .\public\
+
 cd public
 
 git add .

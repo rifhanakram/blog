@@ -1,0 +1,21 @@
+<h1 style="font-family: 'IBM Plex Mono', monospace;" class="site-header">
+    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+</h1>
+<nav>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <a style="font-family: 'IBM Plex Mono', monospace;" class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ end }}
+    <div>
+        <i>
+            <a class="fab fa-linkedin" href="https://www.linkedin.com/in/rifhanakram/" target="_blank"></a>
+        </i>
+        <i>
+            <a class="fab fa-github" href="https://github.com/rifhanakram" target="_blank"></a>
+        </i>
+        <i>
+            <a class="fab fa-twitter" href="https://twitter.com/RifhanAkram1" target="_blank"></a>
+        </i>
+    </div>
+    
+</nav>
