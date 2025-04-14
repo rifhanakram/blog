@@ -2,7 +2,7 @@ baseURL= "https://blog.rifhanakram.com/"
 languageCode= "en-us"
 title= "Scribbles by Rifhan"
 theme= "anubis"
-paginate= 10
+pagination.pagerSize= 10
 disqusShortname= "blog-rifhanakram"
 env= "production"
 
