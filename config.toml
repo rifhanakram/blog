@@ -1,37 +1,24 @@
-baseURL= "https://blog.rifhanakram.com/"
-languageCode= "en-us"
-title= "Scribbles by Rifhan"
-theme= "anubis"
-pagination.pagerSize= 10
-disqusShortname= "blog-rifhanakram"
-env= "production"
-
-[author]
-  name = "Rifhan Akram"
-
+# config.toml
 [params]
-   author = "Rifhan Akram"
-   description = "Scribbles by Rifhan is a personal blog"
-   dateFormat = "2006-01-02"
-   paginationSinglePost = true
-   style = "light-without-switcher"
-   readMore = false
-
-[menu]
-
-  [[menu.main]]
-    identifier = "tech-talk"
-    name = "Tech Talks"
-    url = "/posts/tech-talks"
-    weight = 2
-
-  [[menu.main]]
-    name = "Posts"
-    identifier = "posts"
-    url = "/posts/"
-    weight = 3
-
-
-
-[markup.goldmark.renderer]
-unsafe = true
+  google_analytics_id = ""
+  twitter_handle = "@zerostaticio"
+  showAuthorOnHomepage = true
+  showAuthorOnPosts = false
+  showIntroContentOnHomepage = true
+  showPostsOnHomepage = true
+  usePaginationOnHomepage = false
+  limitPostsOnHomepage = 3 # only used if usePaginationOnHomepage is false
+  sortPostsByDateOldestFirst = false
+  addDot = true
+  addFrame = true
+  highlightColor = '#7b16ff'
+  baseColor = "#ffffff"
+  baseOffsetColor = "#eaeaea"
+  headingColor = "#1c1b1d"
+  textColor = "#4e5157"
+  dotColor = "#7b16ff"
+  enableGoogleFonts = true 
+  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+  fontFamilyHeading = "Poppins"
+  fontFamilyParagraph = "Helvetica"
+  fontFamilyMonospace = "monospace"

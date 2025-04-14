@@ -21,8 +21,4 @@
         </div>
         {{ partial "articleInfoFull.html" . }}
     </article>
-    {{ if .Site.DisqusShortname }}
-        {{ template "_internal/disqus.html" . }}
-    {{ end }}
-
 {{ end }}
