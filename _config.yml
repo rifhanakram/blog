@@ -1,0 +1,88 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "Scribbles by Rifhan"
+description: "Scribbles by Rifhan is a personal blog"
+url: "https://blog.rifhanakram.com"   # Your custom domain
+baseurl: ""                           # Leave empty since you're using a custom domain
+
+# Author settings
+author:
+  name: "Rifhan Akram"
+
+# Build settings
+markdown: kramdown
+theme: minima
+permalink: /posts/:title/
+
+# Plugins needed for GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination settings
+paginate: 10
+paginate_path: "/posts/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+
+# Default front matter for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Rifhan Akram"
+
+# Comments
+disqus:
+  shortname: blog-rifhanakram
+
+# Date format
+# Jekyll uses a different date format syntax than Hugo
+# This is similar to Hugo's "2006-01-02" format
+date_format: "%Y-%m-%d"
+
+# Navigation menu
+header_pages:
+  - title: "Tech Talks"
+    url: /posts/tech-talks/
+  - title: "Posts"
+    url: /posts/
+
+# Additional settings
+kramdown:
+  syntax_highlighter: rouge
+  parse_block_html: true  # Similar to Hugo's unsafe = true
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - deploy.sh
+  - README.md
+  - .git
+  - .gitignore

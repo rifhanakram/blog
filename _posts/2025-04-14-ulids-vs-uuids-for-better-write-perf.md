@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "UUIDs vs ULIDs For Better Write Performance At Scale"
-date: 2023-01-14T21:29:58+05:30
-draft: false
+date: 2023-01-14
+categories: [tech]
 ---
 
 # UUIDs vs ULIDs For Better Write Performance At Scale
@@ -30,7 +31,7 @@ In most cases in relational databases, it is allowed to have only 1 clustered in
 
 In MSSQL when writing data to a table the DBMS includes logical and physical writes. A logical write is when data is modified in a page in the buffer cache and marked as dirty. A physical write is when a dirty page is written from the buffer cache to the disk. Since logical writes are not immediately written to disk there can be more than one logical write to a page in the buffer cache as long as the record is intended to be written on that page(determined by the clustered index).
 
-![sql-writes.png](/img/sql-writes.png)
+![sql-writes.png](/static/img/sql-writes.png)
 *Reference - [Writing Pages - SQL Server | Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/writing-pages?view=sql-server-ver16)*
 
 The DBMS must first determine the correct page to store the new row of data based on the clustered index. To do this, it typically performs a binary search on the index to identify the correct page, once the page is identified it needs to read the page from the disk into the buffer cache, this is only required if the page is not present in the buffer cache. 
@@ -49,7 +50,7 @@ As soon as you start using a column that is not ordered(during generation) for a
 UUIDs are 128-bit long strings that can guarantee
 uniqueness across space and time. They are widely used to uniquely identify resources. There are several versions of UUIDs, each with a slightly different format. The most generally used UUID version is 4. 
 
-![uuid.png](/img/uuid.png)
+![uuid.png](/static/img/uuid.png)
 *128 bit UUIDV4 string*
 
 A more detailed explanation of UUID can be found in [RFC 4122](https://www.ietf.org/rfc/rfc4122.txt)

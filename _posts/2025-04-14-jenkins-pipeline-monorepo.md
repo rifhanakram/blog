@@ -1,9 +1,9 @@
 ---
+layout: post
 title: "Automated CI/CD for Monorepo's"
-date: 2020-10-27T00:29:58+05:30
-draft: false
+date: 2020-10-27
+categories: [tech]
 ---
-
 
 Monorepo is an approach in managing source code under a product, team or company within a single repo as oppose to multi-repo where a single product/application is contained within its own git repository.
 
@@ -68,10 +68,10 @@ Once we have this setup we can go about and setup separate pipeline jobs for eac
 
 >*Below is an example on how the main multi-branch job will look in Jenkins*
 
-![jenkins-multi-main.png](/img/jenkins-multi-main.png)
+![jenkins-multi-main.png](/static/img/jenkins-multi-main.png)
 In the above image the multi-branch job has executed when a change has been pushed to the master branch. When we navigate into the master branch execution we can see the pipeline as shown below,
 
-![jenkins-multi-stage-view.png](/img/jenkins-multi-stage-view.png)
+![jenkins-multi-stage-view.png](/static/img/jenkins-multi-stage-view.png)
 
 In the stage view we can see that build #9 contains changes only for 1 application and build #10 contains changes for both. 
 

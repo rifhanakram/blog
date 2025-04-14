@@ -10,14 +10,17 @@ msg="$1"
 
 echo "Deploying Updates to Github Pages"
 
+# Build Jekyll site in production mode
+JEKYLL_ENV=production bundle exec jekyll build
+
 # Remove all files in public directory
 rm -rf ./public/*
 
-# Build with hugo using anubis theme
-hugo -t anubis
+# Copy the built site to public directory
+cp -r _site/* public/
 
-# Move CNAME file to public directory
-# mv CNAME ./public/
+# Create CNAME file
+echo "blog.rifhanakram.com" > public/CNAME
 
 # Navigate to public directory and commit changes
 cd public
