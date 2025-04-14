@@ -1,7 +1,0 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:rifhanakram/rifhanakram.github.io.git
-	branch = master
-[submodule "themes/hugo-winston-theme"]
-	path = themes/hugo-winston-theme
-	url = https://github.com/zerostaticthemes/hugo-winston-theme.git
