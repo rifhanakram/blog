@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Tech Talks"
-date: 2020-10-27
-categories: [tech]
+permalink: /tech-talks/
 ---
 
 ## gRPC Microservice Communication With AWS App Mesh
@@ -33,5 +32,4 @@ I participated in the second episode of .Net Diaries hosted by Gapstars, where w
 
 - [Video](https://www.youtube.com/watch?v=TSQo109afMk) (August 2023)
 
-Thanks to Gapstars for continuing this insightful series and providing a platform for the .Net community to share knowledge and experiences.
-
+Thanks to Gapstars for continuing this insightful series and providing a platform for the .Net community to share knowledge and experiences. 

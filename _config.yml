@@ -68,10 +68,8 @@ date_format: "%Y-%m-%d"
 
 # Navigation menu
 header_pages:
-  - title: "Tech Talks"
-    url: /posts/tech-talks/
-  - title: "Posts"
-    url: /posts/
+  - path: tech-talks.md
+  - path: posts/index.md
 
 # Additional settings
 kramdown:
@@ -86,3 +84,17 @@ exclude:
   - README.md
   - .git
   - .gitignore
+
+minima:
+  nav_pages:
+    - tech-talks.md
+  social-links:
+    - title: "GitHub"
+      icon: "github"
+      url: "https://github.com/rifhanakram"
+    - title: "LinkedIn"
+      icon: "linkedin"
+      url: "https://www.linkedin.com/in/rifhanakram/"
+    - title: "X"
+      icon: "x-twitter"
+      url: "https://X.com/rifhanakram1"

@@ -8,6 +8,13 @@ fi
 
 msg="$1"
 
+# Check if local preview is requested
+if [ "$2" == "--local" ]; then
+    echo "Running local preview..."
+    bundle exec jekyll serve --watch
+    exit 0
+fi
+
 echo "Deploying Updates to Github Pages"
 
 # Build Jekyll site in production mode
